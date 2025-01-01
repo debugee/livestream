@@ -179,11 +179,12 @@ target_compile_definitions(aaaa PRIVATE
 )
 
 if(MINGW)
-    target_link_libraries(aaaa PRIVATE libwinpthread.a libc++.a libunwind.a ws2_32)
+    target_link_libraries(aaaa PRIVATE libwinpthread.a libc++.a libunwind.a)
     target_link_options(aaaa PRIVATE -Wl,--pdb=)
 else()
     set_target_properties(aaaa PROPERTIES MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
 endif()
+target_link_libraries(aaaa PRIVATE ws2_32)
 
 if(_unicode)
     target_compile_definitions(aaaa PRIVATE UNICODE _UNICODE)
