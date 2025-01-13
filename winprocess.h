@@ -1,7 +1,7 @@
 #ifndef __WINPROCESS_H__
 #define __WINPROCESS_H__
 #include "process.h"
-#include <Windows.h>
+#include <windows.h>
 
 class CWinProcess : public CProcess
 {

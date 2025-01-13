@@ -1,10 +1,10 @@
 #pragma once
 #include <stdio.h>
 #include <tchar.h>
-#include <Windows.h>
-#include <Psapi.h>
-#include <TlHelp32.h>
-#include <Shlwapi.h>
+#include <windows.h>
+#include <psapi.h>
+#include <tlhelp32.h>
+#include <shlwapi.h>
 #include <vector>
 #include <string>
 

@@ -1,5 +1,5 @@
 #include <windows.h>
-#include <Shlwapi.h>
+#include <shlwapi.h>
 #include <tchar.h>
 #include "injectlib.h"
 #include "charset.h"

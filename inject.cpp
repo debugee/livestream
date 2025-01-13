@@ -1,11 +1,11 @@
-#include <Windows.h>
+#include <windows.h>
 #include <tchar.h>
 #include <string>
 #include <map>
 #include <vector>
 #include <algorithm>
 #include <cctype>
-#include "System.h"
+#include "system.h"
 
 using namespace std;
 

@@ -1,6 +1,6 @@
 #ifndef __QNANTIDEBUG_H__
 #define __QNANTIDEBUG_H__
-#include <Windows.h>
+#include <windows.h>
 
 BOOL AntiDebug();
 
