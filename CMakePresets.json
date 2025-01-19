@@ -72,7 +72,8 @@
             ],
             "generator": "Unix Makefiles",
             "environment": {
-                "PATH":"$penv{PATH}:/Users/admin/Downloads/llvm-mingw-20240619-ucrt-macos-universal/bin"
+                "MACOSX_DEPLOYMENT_TARGET": "14",
+                "PATH":"$penv{PATH}:/Users/admin/Downloads/llvm-mingw-20250114-ucrt-macos-universal/bin"
             }
         },
         {

@@ -46,15 +46,22 @@ string charset::URLEncode(const string &sIn, bool spacePlus)
 string charset::URLDecode(const string &sIn)
 {
     string sOut;
-    size_t size = sOut.size();
+    size_t size = sIn.size();
     for (size_t ix = 0; ix < size; ix++)
     {
         char ch = 0;
         if (sIn[ix] == '%')
         {
-            ch = (char)(fromHex((unsigned char)sIn[ix + 1]) << 4);
-            ch |= fromHex((unsigned char)sIn[ix + 2]);
-            ix += 2;
+            if (ix + 2 < size && isxdigit(sIn[ix + 1]) && isxdigit(sIn[ix + 2]))
+            {
+                ch = (char)(fromHex((unsigned char)sIn[ix + 1]) << 4);
+                ch |= fromHex((unsigned char)sIn[ix + 2]);
+                ix += 2;
+            }
+            else
+            {
+                ch = '%';
+            }
         }
         else if (sIn[ix] == '+')
         {
